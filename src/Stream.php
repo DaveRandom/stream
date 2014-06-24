@@ -129,4 +129,9 @@ class Stream extends EventEmitter implements ReadableStreamInterface, WritableSt
     {
         return $this->buffer;
     }
+
+    public function getContextOptions()
+    {
+        return stream_context_get_options($this->stream);
+    }
 }
